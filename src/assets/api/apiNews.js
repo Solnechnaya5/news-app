@@ -5,20 +5,10 @@ const API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
 
 export const getNews = async () => {
   try {
-    const response = await axios.get(`${API_URL}/top-headlines`, {
-      params: {
-        apikey: API_KEY,
-        country: "ua",
-        lang: "uk",
-        max: 10,
-      },
-     
-
-    });
-
+    const response = await axios.get("/api/news");
     return response.data.articles ?? [];
   } catch (error) {
-    console.error("GNews error:", error);
+    console.error("News error:", error);
     return [];
   }
 };
