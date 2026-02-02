@@ -1,22 +1,33 @@
-import axios from "axios";
+// import axios from "axios";
 
-const API_URL = import.meta.env.proxyUrl
-const API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
+// const API_URL = import.meta.env.proxyUrl
+// const API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
+
+// export const getNews = async () => {
+//   try {
+//     const response = await axios.get(`${API_URL}/top-headlines`, {
+//       params: {
+//         apikey: API_KEY,
+//         country: "ua",
+//         lang: "uk",
+//         max: 10,
+//       },
+//     });
+
+//     return response.data.articles ?? [];
+//   } catch (error) {
+//     console.error("GNews error:", error);
+//     return [];
+//   }
+// };
+import axios from 'axios';
 
 export const getNews = async () => {
   try {
-    const response = await axios.get(`${API_URL}/top-headlines`, {
-      params: {
-        apikey: API_KEY,
-        country: "ua",
-        lang: "uk",
-        max: 10,
-      },
-    });
-
-    return response.data.articles ?? [];
-  } catch (error) {
-    console.error("GNews error:", error);
+    const res = await axios.get('/api/news');
+    return res.data.articles ?? [];
+  } catch (e) {
+    console.error(e);
     return [];
   }
 };
