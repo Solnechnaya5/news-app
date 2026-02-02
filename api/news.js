@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  const API_URL = "https://gnews.io/api/v4/top-headlines";
   const API_KEY = process.env.VITE_GNEWS_API_KEY;
 
   const params = new URLSearchParams({
@@ -9,9 +8,10 @@ export default async function handler(req, res) {
     max: 10,
   });
 
-  const response = await fetch(`${API_URL}?${params}`);
-  const data = await response.json();
+  const response = await fetch(
+    `https://gnews.io/api/v4/top-headlines?${params}`
+  );
 
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const data = await response.json();
   res.status(200).json(data);
 }
