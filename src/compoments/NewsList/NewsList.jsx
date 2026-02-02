@@ -9,7 +9,7 @@ export const NewsList = ({ newslist }) => {
         <div className='articles-wrapper'>
             {newslist.map(item => {
                 return (
-                    <ArticleItem item={item} />
+                    <ArticleItem item={item} key={item.id}/>
                 )
             })}
         </div>
