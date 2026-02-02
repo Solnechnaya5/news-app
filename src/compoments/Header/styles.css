@@ -1,0 +1,24 @@
+.header {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    margin: 0 auto;
+    border-bottom: 1px solid #F2F4F5;
+
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-title {
+    margin-bottom: 12px;
+}
+
+.header-date {
+    font-size: 18px;
+}

@@ -1,0 +1,20 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner-title {
+    margin-bottom: 8px;
+}
+
+.banner-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #6c7072;
+}

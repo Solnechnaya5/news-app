@@ -1,0 +1,21 @@
+
+.article {
+    flex: 1 1 calc((100% - 24px * 3) / 4);
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+    gap: 8px;
+}
+
+.article-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #6c7072;
+}
