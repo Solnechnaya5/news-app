@@ -14,6 +14,7 @@ export const ArticleItem = ({ item }) => {
                 <p className='article-details'><span>Опубліковано: {formatTimeAgo(item.publishedAt)}</span>
                     <span className='article-source'>Джерело: {item.source.name}</span></p>
                     <p className="article-descriptoin">{item.description.slice(0, 60)}...</p>
+                    <a href={item.url} className='article-link'>Читати повністю</a>
             </article>
      
     )
